@@ -1,6 +1,6 @@
 # TelegramWithAPI
 Simple bot which use api.
-Parsed by regex. Because don't have an any API in general.
+Parsed by regex. Because don't have any API in general.
 ![image](https://user-images.githubusercontent.com/53124211/211027072-fd9c6868-65d7-429a-b301-4d59eefc1099.png)
 
 RESULT:

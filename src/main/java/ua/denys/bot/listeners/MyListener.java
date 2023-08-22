@@ -1,4 +1,4 @@
-package ua.denis.bot.listeners;
+package ua.denys.bot.listeners;
 
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.UpdatesListener;
@@ -8,8 +8,8 @@ import com.pengrad.telegrambot.request.SendMessage;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ua.denis.bot.Bot;
-import ua.denis.bot.services.CatFactService;
+import ua.denys.bot.Bot;
+import ua.denys.bot.services.CatFactService;
 
 import java.util.List;
 

@@ -12,11 +12,11 @@ RESULT:
 ![image](https://user-images.githubusercontent.com/53124211/211027098-c4f80937-fdf6-44d6-b892-ba3dd11f8678.png)
 
 
-# HOW TO BUILD BOT WITH MY TOKEN:
+# HOW TO BUILD BOT WITH YOUR TOKEN:
 
 1. First of all you need to open a command line with directory where placed mvnw.cmd.
 ![Maven wrapper file place](https://github.com/Buivol16/TelegramWithAPI/assets/53124211/09d2e039-0ef6-4a0a-b670-8c8b8b8eed8b)
-2. Next step will be typing command for running compilator.
+2. Next step will be typing command for running a compilator.
 Command:
 ```
 ./mvnw clean package -Dtoken=SOME_TOKEN

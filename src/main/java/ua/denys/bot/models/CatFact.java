@@ -5,7 +5,7 @@ public record CatFact(String fact, int length) {
     @Override
     public String toString() {
         String text = "New fact: " + fact();
-        String length = "His length was: " + length();
+        String length = "It length was: " + length();
         return text + "\n" + length;
     }
 }

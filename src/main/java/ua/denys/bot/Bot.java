@@ -3,6 +3,8 @@ package ua.denys.bot;
 
 import com.pengrad.telegrambot.TelegramBot;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +14,10 @@ import org.springframework.stereotype.Component;
 import ua.denys.bot.listeners.MyListener;
 
 @Component
-@NoArgsConstructor
+@Slf4j
+@RequiredArgsConstructor
 public class Bot {
-
-    @Autowired
-    MyListener myListener;
+    private final MyListener myListener;
 
     Logger logger = LoggerFactory.getLogger(Bot.class);
 

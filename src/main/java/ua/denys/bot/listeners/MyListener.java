@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ua.denys.bot.Bot;
-import ua.denys.bot.services.CatFactService;
+import ua.denys.bot.service.CatFactService;
 
 import java.util.List;
 
@@ -27,8 +27,13 @@ public class MyListener implements UpdatesListener {
         bot = Bot.getTelegramBot();
         list.forEach(update ->{
             long chatId = update.message().chat().id();
-            Message message = update.message();
-            if (message != null && message.text().equals("/getfact")) bot.execute(new SendMessage(chatId, catFactService.getFact().toString()));
+            var message = update.message();
+            var isGetFactCommand = message.text().equals("/getfact");
+            if (message != null && isGetFactCommand) {
+                var fact = catFactService.getFact().toString();
+                var sendMessageRequest = new SendMessage(chatId, fact);
+                bot.execute(sendMessageRequest);
+            }
         });
         return UpdatesListener.CONFIRMED_UPDATES_ALL;
     }
